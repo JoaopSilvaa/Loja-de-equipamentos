@@ -18,4 +18,14 @@ export default class UserModel {
     const { insertId } = dataInsert;
     return { id: insertId, ...user };
   }
+
+  public async getUser(username: string, password: string): Promise<User> {
+    const result = await this.connection.execute(
+      'SELECT * FROM Trybesmith.Users WHERE username=? AND password=?',
+      [username, password],
+    );
+    const [rows] = result;
+    const [user] = rows as User[];
+    return user;
+  }
 }

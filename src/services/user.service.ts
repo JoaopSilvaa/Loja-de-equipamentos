@@ -22,6 +22,16 @@ export default class UserService {
     return token;
   }
   
+  public async login(username: string, password: string): Promise<void | string> {
+    const user = await this.model.getUser(username, password);
+    if (!user) {
+      return user;
+    }
+
+    const token = doToken(username, password);
+    return token;
+  }
+
   // public async getAll(): Promise<Product[]> {
   //   const result = await this.model.getAll();
   //   return result;

@@ -15,4 +15,16 @@ export default class UserController {
 
     res.status(201).json({ token });
   };
+
+  public login = async (req: Request, res: Response) => {
+    const { username, password } = req.body;
+
+    const token = await this.service.login(username, password);
+
+    if (!token) {
+      return res.status(401).json({ message: 'Username or password invalid' });
+    }
+
+    res.status(200).json({ token });
+  };
 }

@@ -1,5 +1,6 @@
 import express from 'express';
 import productRouter from './routes/product.routes';
+import userRouter from './routes/user.routes';
 import error from './middlewares/error.middleware';
 
 const app = express();
@@ -7,6 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use(productRouter);
+app.use(userRouter);
 
 app.use(error);
 

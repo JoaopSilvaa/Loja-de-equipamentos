@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 
-function validationUser(req: Request, res: Response, next: NextFunction) {
+function validationLogin(req: Request, res: Response, next: NextFunction) {
   const { username, password } = req.body;
 
   if (!username) {
@@ -13,4 +13,4 @@ function validationUser(req: Request, res: Response, next: NextFunction) {
   next();
 }
   
-export default validationUser;
+export default validationLogin;

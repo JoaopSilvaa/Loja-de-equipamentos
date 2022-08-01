@@ -8,14 +8,26 @@ export default class OrderController {
     this.service = new OrderService();
   }
 
-  //   public create = async (req: Request, res: Response) => {
-  //     const product = req.body;
+  // public create = async (req: Request, res: Response) => {
+  //   const { productsIds } = req.body;
 
-  //     const productCreated = await this.service.create(product);
+  //   const token = req.headers.Authentication;
 
-  //     res.status(201).json(productCreated);
-  //   };
+  //   if (!token) {
+  //     return res.status(401).json({ message: 'Token not found' });
+  //   }
 
+  //   const user = await verify(token);
+
+  //   if (!user) {
+  //     return res.status(401).json({ message: 'Invalid Token' });
+  //   }
+
+  //   const orderCreated = await this.service.create(productsIds);
+
+  //   res.status(201).json(orderCreated);
+  // };
+ 
   public getAll = async (_req: Request, res: Response) => {
     const orders = await this.service.getAll();
 

@@ -50,21 +50,21 @@ Back-end:
 
 * /products - GET
     > Endpoint disponível para listar os produtos:
-      ```json
-    [
-      {
-        "id": 1,
-        "name": "Poção de cura",
-        "amount": "20 gold",
-        "orderId": null
-      },
-      {
-        "id": 2,
-        "name": "Escudo do Herói",
-        "amount": "100 diamond",
-        "orderId": 1
-      }
-    ]
+    ```json
+        [
+        {
+            "id": 1,
+            "name": "Poção de cura",
+            "amount": "20 gold",
+            "orderId": null
+        },
+        {
+            "id": 2,
+            "name": "Escudo do Herói",
+            "amount": "100 diamond",
+            "orderId": 1
+        }
+        ]
     ```
 
 * /users - POST
@@ -115,5 +115,5 @@ Back-end:
         }
     ```
 
-
+<br><br>
 Este projeto foi desenvolvido por [João Antônio](https://www.linkedin.com/in/joaoantoniosilvaa/) durante o curso de Desenvolvimento de Software na [Trybe](https://www.betrybe.com/) 
